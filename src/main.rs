@@ -40,10 +40,10 @@ struct Cli {
     #[arg(short, long, action = clap::ArgAction::SetTrue, help = "Invert image colors")]
     invert: Option<bool>,
 
-    #[arg(short = 't', long, action = clap::ArgAction::SetTrue, help = "Invert image colors")]
+    #[arg(short = 't', long, action = clap::ArgAction::SetTrue, help = "Apply sine on image(idk)")]
     trig: Option<bool>,
     
-    #[arg(short = 's', long, action = clap::ArgAction::SetTrue, help = "Invert image colors")]
+    #[arg(short = 's', long, action = clap::ArgAction::SetTrue, help = "Apply Sobel filter on image")]
     sobel: Option<bool>
 }
 
