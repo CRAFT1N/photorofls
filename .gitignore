@@ -3,3 +3,4 @@ target
 *.jpg
 *.png
 *.lock
+!img/*.png
