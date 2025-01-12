@@ -35,3 +35,5 @@ Options:
 ### For example
 - For linux x86/x64 (gnu compiler) `cargo build --release --target x86_64-unknown-linux-gnu`
 - For Windows x86/x64 (gnu compiler) `cargo build --release --target x86_64-pc-windows-gnu`
+## Sources
+- Example picture [https://cdnn21.img.ria.ru/images%2F07e7%2F0b%2F0f%2F1909535360_0%3A180%3A3000%3A1868_1920x1080_80_0_0_dccc70d9673e6557e62459da5368acff.jpg](https://cdnn21.img.ria.ru/images%2F07e7%2F0b%2F0f%2F1909535360_0%3A180%3A3000%3A1868_1920x1080_80_0_0_dccc70d9673e6557e62459da5368acff.jpg)
