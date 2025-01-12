@@ -28,10 +28,10 @@ struct Cli {
     #[arg(short, long, value_name = "FILE", help = "Supported formats: bmp, jpeg, png, ico, tga, tiff, webp, exr")]
     filepath: Option<PathBuf>,
 
-    #[arg(short = 'l', long, value_name = "Scale factor", help = "Downscale image by scale factor (only integer value)")]
+    #[arg(short = 'l', long, value_name = "Scale by", help = "Downscale image by integer value")]
     downscale: Option<u32>,
 
-    #[arg(short, long, value_name = "Scale factor", help = "Upscale image by scale factor (only integer value)")]
+    #[arg(short, long, value_name = "Scale by", help = "Upscale image by integer value")]
     upscale: Option<u32>,
 
     #[arg(short = 'd', long, action = clap::ArgAction::SetTrue, help = "Dither image")]
@@ -185,7 +185,7 @@ fn trig_rofls(filename: &str) {
         let rf = f64::from(current_pixel[0]);
         let gf = f64::from(current_pixel[1]);
         let bf = f64::from(current_pixel[2]);
-        *pixel = Rgb([(pos_sin(rf, yf) * 1.15) as u8, (pos_sin(gf, xf) * 1.15) as u8, (bf - (((pos_sin(rf, yf) + pos_sin(gf, xf)) / 2f64)) * 1.15) as u8])
+        *pixel = Rgb([(pos_sin(rf, yf) * 1.15) as u8, (pos_sin(gf, xf) * 1.15) as u8, (bf - ((pos_sin(rf, yf) + pos_sin(gf, xf)) / 2f64) * 1.15) as u8])
     }
     img_buff.save(filename.to_string() + "_t.png").unwrap()
 }
